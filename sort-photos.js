@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-// fs.rename('/Users/ornella/Documents/camera-raw-jpeg/raw', '/Users/ornella/Documents/camera-raw-jpeg/raw-new', (err) => {
+// fs.rename('', '', (err) => {
 //     if(err) throw err
 //     console.log('rename completed')
 // })
@@ -53,10 +53,9 @@ function deleteFile(sourceDir) {
     })
 }
 
-deleteFile('/Users/ornella/Documents/camera-raw-jpeg/text')
 
-// sortFiles(
-//   "/Users/ornella/Documents/camera-raw-jpeg",
-//   "/Users/ornella/Documents/camera-raw-jpeg/text",
-//   "/Users/ornella/Documents/camera-raw-jpeg/word"
-// );
+sortFiles(
+  "",
+  "",
+  ""
+);
