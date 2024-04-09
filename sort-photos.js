@@ -6,8 +6,8 @@ const path = require("path");
 //     console.log('rename completed')
 // })
 
-const rawExtension = [".cr2", ".cr3"];
-const jpegExtension = [".jpeg", ".jpg"];
+const rawExtension = [".cr2", ".cr3", '.docx'];
+const jpegExtension = [".jpeg", ".jpg", '.txt'];
 
 function sortFiles(sourceDir, rawDir, jpegDir) {
   // make sure directory exist, otherwise create it
@@ -46,10 +46,22 @@ function sortFiles(sourceDir, rawDir, jpegDir) {
   });
 }
 
-function deleteFile(sourceDir) {
-  fs.readdirSync(sourceDir).forEach((filename) => {
-    fs.unlinkSync(path.join(sourceDir, filename));
-  });
-}
+// function deleteFile(sourceDir) {
+//   fs.readdirSync(sourceDir).forEach((filename) => {
+//     fs.unlinkSync(path.join(sourceDir, filename));
+//   });
+// }
 
-sortFiles("", "", "");
+/**
+ * 
+The two commas in the array destructuring assignment const [,, sourceDirectory, cr2Directory, jpegDirectory] = process.argv; are used to skip over the first two elements in the process.argv array.
+
+In Node.js, process.argv is an array that contains command-line arguments passed when running the Node.js script. By default, the first two elements of process.argv are:
+
+The path to the Node.js executable (process.argv[0])
+The path to the JavaScript file being executed (process.argv[1])
+ */
+
+const [,,sourceDirectory, rawDirectory, jpegDirectory] = process.argv
+
+sortFiles(sourceDirectory, rawDirectory, jpegDirectory);
