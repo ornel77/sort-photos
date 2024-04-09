@@ -6,8 +6,8 @@ const path = require("path");
 //     console.log('rename completed')
 // })
 
-const rawExtension = [".cr2", ".cr3", '.docx'];
-const jpegExtension = [".jpeg", ".jpg", '.txt'];
+const rawExtension = [".cr2", ".cr3"];
+const jpegExtension = [".jpeg", ".jpg"];
 
 function sortFiles(sourceDir, rawDir, jpegDir) {
   // make sure directory exist, otherwise create it
